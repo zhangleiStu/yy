@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #small {
+            display: none;
+        }
+        button {
+            cursor: pointer;
+        }
+        
+        li {
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+            var diji = document.getElementById("diji");
+            var small = document.getElementById("small");
+            var targer = document.getElementById("targer");
+
+            var liArr = targer.getElementsByTagName("li");
+
+
+            diji.onclick = function (){
+                small.style.display = "block";
+            }
+
+
+            for (var i = 0; i<liArr.length;i++){
+                if(i%2==0){
+//                    liArr[i].style.backgroundColor = "#ccc";
+                    liArr[i].style.backgroundColor = "yellow";
+                } else {
+//                    liArr[i].style.backgroundColor = "#c0c0c0";
+                    liArr[i].style.backgroundColor = "red";
+                }
+            }
+
+            liArr[i].onclick = function(){
+                color = this.style.backgroundColor;
+
+//                this.style.backgroundColor = "#fff";
+                this.style.backgroundColor = "#ccc";
+            }
+
+
+            liArr[i].onmouseover = function(){
+
+//                this.style.backgroundColor = "#fff";
+                this.style.backgroundColor = "#ccc";
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+<button id="diji">显示</button>
+<div id="small">
+    <ul id="targer">
+        <li>第一个球队</li>
+        <li>第二个球队</li>
+        <li>第三个球队</li>
+        <li>第四个球队</li>
+        <li>第五个球队</li>
+    </ul>
+</div>
+
+
+</body>
+</html>
